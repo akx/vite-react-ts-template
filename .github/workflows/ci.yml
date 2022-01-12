@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: "14.x"
       - run: yarn
-#      - run: yarn build --base=/nessu/
+#      - run: yarn build --base=/CHANGE_THIS/
 #        env:
 #          GENERATE_SOURCEMAP: "false"
 #      - name: Deploy
