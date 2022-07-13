@@ -10,21 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
+          node-version: "16.x"
+          cache: yarn
       - run: yarn
+#      - run: yarn lint
 #      - run: yarn build --base=/CHANGE_THIS/
-#        env:
-#          GENERATE_SOURCEMAP: "false"
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@4.0.0
+#      - uses: JamesIves/github-pages-deploy-action@4.3.4
 #        with:
 #          branch: gh-pages
 #          folder: dist
