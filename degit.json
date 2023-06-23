@@ -1,0 +1,9 @@
+[
+  {
+    "action": "remove",
+    "files": [
+      "LICENSE",
+      "README.md"
+    ]
+  }
+]
