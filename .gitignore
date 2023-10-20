@@ -1,6 +1,14 @@
 *.local
-*.log
+*.local
+*.log*
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+*.sw?
 .DS_Store
+.idea
 dist
 dist-ssr
+logs
 node_modules
