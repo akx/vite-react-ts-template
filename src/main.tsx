@@ -9,5 +9,5 @@ const root = createRoot(rootElement!); // eslint-disable-line
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

@@ -22,10 +22,10 @@ yourself.
 
 After you've set up your project:
 
-* Use the `dev` script for the Vite live server.
-* Use `build` to type-check and build the project.
-* Use `lint` to run ESlint.
-* Use `prettify` to have Prettier reformat your files.
+- Use the `dev` script for the Vite live server.
+- Use `build` to type-check and build the project.
+- Use `lint` to run ESlint.
+- Use `prettify` to have Prettier reformat your files.
 
 ## License
 
