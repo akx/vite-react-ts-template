@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "lib": ["ES2023"],
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "Bundler",
@@ -18,9 +18,8 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022"
+    "target": "ES2020",
+    "useDefineForClassFields": true
   },
-  "include": [
-    "vite.config.ts"
-  ]
+  "include": ["src"]
 }
