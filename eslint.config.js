@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
-import reactPlugin from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
+import reactX from "eslint-plugin-react-x";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
@@ -13,9 +12,6 @@ const overrides = {
   "unicorn/prefer-optional-catch-binding": "off",
   "unicorn/prevent-abbreviations": "off",
   "unicorn/text-encoding-identifier-case": "off",
-  "react/no-unescaped-entities": "off",
-  "react/prop-types": "off",
-  "react/react-in-jsx-scope": "off",
   "prefer-template": "error",
   "@typescript-eslint/no-unused-vars": [
     "error",
@@ -35,15 +31,14 @@ export default tseslint.config(
   { ignores: ["dist", "postcss.config.cjs"] },
   {
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2023,
       globals: globals.browser,
     },
     settings: { react: { version: "detect" } },
   },
   js.configs.recommended,
   tseslint.configs.recommended,
-  reactPlugin.configs.flat.recommended,
-  reactHooks.configs["recommended-latest"],
+  reactX.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
   prettierConfig,
   {
