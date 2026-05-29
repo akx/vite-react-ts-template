@@ -1,0 +1,29 @@
+name: Smoke Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  scaffold-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: template
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+      - name: Scaffold project from template
+        run: |
+          cp -a template my-app
+          cd my-app
+          rm -rf .git .github
+      - name: Install, type-check (tsc), lint, build
+        working-directory: my-app
+        run: |
+          yarn install
+          yarn tsc -b --noEmit
+          yarn lint
+          yarn build
